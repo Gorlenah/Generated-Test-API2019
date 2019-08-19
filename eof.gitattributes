@@ -1,10 +1,20 @@
-* text eol=lf
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
 
-# Definitively text files 
-*.txt text
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
 *.c text
 *.h text
 
-# Ensure those won't be messed up with
+# Declare files that will always have CRLF line endings on checkout.
+*.sln text eol=crlf
+
+# Declare files that will always have LF line endings on checkout.
+*.txt text eol=lf
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
 *.jpg binary
-*.data binary
+
+
+#Facchi
